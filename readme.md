@@ -1,4 +1,4 @@
-#rsvpme
+#rsvp-me
 
 rsvpme allows people to find events that interest them and RSVP to them.
 
