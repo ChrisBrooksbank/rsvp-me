@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RSVPME.DataAccess.Entities;
+using RSVPME.Domain.Entities;
 
 namespace RSVPME.DataAccess
 {
@@ -9,6 +9,8 @@ namespace RSVPME.DataAccess
         {
         }
 
-        DbSet<Event> Events { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<Event> Events { get; set; }
     }
 }

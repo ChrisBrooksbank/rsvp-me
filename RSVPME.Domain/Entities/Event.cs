@@ -1,25 +1,25 @@
 ﻿using System;
 
-namespace RSVPME.DataAccess.Entities
+namespace RSVPME.Domain.Entities
 {
     public class Event
     {
         public int Id { get; set; }
+        public Group Group { get; set; }
+        public bool IsPublished { get; set; }
         public string Title { get; set; }
         public DateTime StartTime { get; set; }
-        public int? Duration { get; set; }
-        public string Description { get; set; }
-        public string Location { get; set; }
+        public TimeSpan? Duration { get; set; }
+        public byte[] Image { get; set; }
+        public string Details { get; set; }
+        public Location Location { get; set; }
         public string RSVPQuestion { get; set; }
-        public int? AttendeeLimit { get; set; }
+        public int? MaxGuests { get; set; }
         public int? AllowGuests { get; set; }
         public DateTime? RSVPOpen { get; set; }
         public DateTime? RSVPClose { get; set; }
-        public Boolean HasFee { get; set; }
-        public string FeePaymentMethod { get; set; }
-        public string FeeCurrency { get; set; }
-        public decimal FeeAmount { get; set; }
+        public Fee Fee { get; set; }
         public string AdditionalRefundPolicy { get; set; }
-
+        public RSVPList RSVPList { get; set; }
     }
 }
